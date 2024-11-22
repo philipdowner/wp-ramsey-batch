@@ -73,7 +73,7 @@ class BatchController
         }
 
         $obj = new $name;
-        add_filter('ramsey-batch-jobs', [$obj, 'registerBatchJob']);
+        add_filter(RB_PLUGIN_SLUG . '-jobs', [$obj, 'registerBatchJob']);
 
         $GLOBALS[RB_PLUGIN_SLUG][$name] = $obj;
     }
